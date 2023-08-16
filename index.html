@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://kit.fontawesome.com/12bbc490c3.js" crossorigin="anonymous"></script>
+	<style>
+		#card-title{
+			display:flex;
+			text-align:center;
+		}
+		#card-title .card{
+			border:1px solid black;
+		}
+		i{
+			 font-size: 32px;
+			 margin-top: 10px;
+		}
+		
+	
+	</style>
+</head>
+<body>
+
+	<div id="card-title"></div>
+
+	
+	<script>
+		<!-- object -->
+		let cards=[
+		{
+			icon:"fa-solid fa-bullseye",
+			title:"100% Placement Assured",
+			content:"The program guarantees job placement upon completion, providing students with a sense of security to excel in their training."
+		},
+		{
+			icon:"fa-solid fa-photo-film",
+			title:"Live Classes + Recording Access",
+			content:"Students have access to both live classes and recordings, giving them flexibility and the ability to revisit class material at any time."
+		},
+		{
+			icon:"fa-solid fa-user-check",
+			title:"Working Professionals as Mentors",
+			content:"The program utilizes experienced working professionals as mentors, providing students with practical insights and real-world knowledge."
+		},
+		{
+			icon:"fa-solid fa-palette",
+			title:"Build Live Projects",
+			content:"Trainees work on live projects to gain practical experience and build a portfolio of work, preparing them for job opportunities."
+		},
+		{
+			icon:"fa-solid fa-award",
+			title:"100+ Hiring Partners",
+			content:"Our recruiter network grows with over 100+ companies, increasing the likelihood of job opportunities upon completion."
+		},
+		{
+			icon:"fa-solid fa-people-group",
+			title:"Wide Alumni Network",
+			content:"Trainees have access to a wide alumni network, providing them with networking opportunities and access to job openings in their field."
+		}
+		]
+			  console.log(cards)
+		
+		function elementCreate(cards){
+			<!-- createElement -->
+		
+		var cardIcon= document.createElement("i");
+		var cardTitle= document.createElement("h2");
+		var cardCont= document.createElement("p");
+			cardSec= document.createElement("div");
+		
+		
+		<!-- obj value assign to element -->
+		
+		<!-- cardIcon.innerHTML =cards.icon; -->
+		cardTitle.innerHTML =cards.title;
+		cardCont.innerHTML =cards.content;
+		
+		<!-- add class to element -->
+		
+		cardIcon.setAttribute("class",cards.icon)
+		cardTitle.setAttribute("class","title")
+		cardCont.setAttribute("class","content")
+		cardSec.setAttribute("class","card")
+		
+		
+		console.log(cardIcon,cardTitle,cardCont)
+		
+		<!-- appendChild -->
+		
+		cardSec.appendChild(cardIcon)
+		cardSec.appendChild(cardTitle)
+		cardSec.appendChild(cardCont)
+		
+		<!-- append DOM -->
+		
+		var cardTitle = document.getElementById("card-title")
+		
+		cardTitle.appendChild(cardSec)
+		}
+		
+	
+		 
+		for(let i=0; i < cards.length; i++){
+				elementCreate(cards[i])
+		}
+		
+	
+	
+	
+	
+	</script>
+</body>
+</html>
